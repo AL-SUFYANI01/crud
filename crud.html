@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="icon" type="image/x-icon" href="/image/planning.png">
+    <title>PRODUCT M.S</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-l">
+                <img src="./image/planning.png" class="header-l-img">
+            </div>
+            <div class="header-h">
+                <h2>product management system</h2>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="crud">
+        <div class="head">
+            <div class="head-title">
+                <h2>crud</h2>
+                <p>product management system</p>
+            </div>
+        </div>
+
+        <div class="inputs">
+            <input placeholder="title" type="text" id="title">
+            <div class="price">
+                <input onkeydown="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeydown="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeydown="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeydown="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMode(this.id)" id="searchTitle">search By Title</button>
+                    <button onclick="getSearchMode(this.id)" id="searchCategory">search By Category</button>
+
+                </div>
+            </div>
+
+            <div id="deleteAllData">
+
+            </div>
+
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="popupContainer">
+        <div id="popup">
+            <p id="pop"></p>
+        </div>
+    </div>
+
+    
+    <script src="js/popup.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
